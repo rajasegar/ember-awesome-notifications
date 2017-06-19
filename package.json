@@ -1,17 +1,17 @@
 {
   "name": "ember-awesome-notifications",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Simple ideas & effects for Ember notifications",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Rajasegar Chandran",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/rajasegar/ember-awesome-notifications",
   "scripts": {
     "build": "ember build",
     "start": "ember server",

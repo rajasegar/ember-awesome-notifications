@@ -1,14 +1,13 @@
 # ember-awesome-notifications
 
-This README outlines the details of collaborating on this Ember addon.
+Simple ideas & effects for Ember notifications
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-awesome-notifications`
-* `npm install`
-* `bower install`
 
+```shell
+ember install ember-awesome-notifications
+```
 ## Running
 
 * `ember serve`
