@@ -2,8 +2,10 @@
 
 Simple ideas & effects for Ember notifications
 
-## Installation
+## Demo
+Coming soon.
 
+## Installation
 
 ```shell
 ember install ember-awesome-notifications
@@ -14,6 +16,16 @@ ember install ember-awesome-notifications
 ### Inject the service 
 ```js
 notifications: Ember.inject.service('ea-notification'),
+```
+
+### Notification container in your templates
+The notification container will work even without wormhole, but still we recommend it 
+to be on the safer side for any UI breakages.
+
+```hbs
+{{#ember-wormhole to="ea-notification-container"}}
+  {{ea-notification-container}}
+{{/ember-wormhole}}
 ```
 
 ### Trigger the notification
