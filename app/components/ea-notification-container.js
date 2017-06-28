@@ -1,0 +1,1 @@
+export { default } from 'ember-awesome-notifications/components/ea-notification-container';

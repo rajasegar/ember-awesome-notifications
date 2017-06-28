@@ -8,6 +8,25 @@ Simple ideas & effects for Ember notifications
 ```shell
 ember install ember-awesome-notifications
 ```
+
+## Usage
+
+### Inject the service 
+```js
+notifications: Ember.inject.service('ea-notification'),
+```
+
+### Trigger the notification
+```js
+let _options = {
+  effect: 'scale'
+  layout: 'growl',
+  type: 'info',
+  message : '<p>This is just a simple notice. Everything is in order and this is a <a href="#">simple link</a>.</p>',
+};
+
+this.get('notifications').addNotification(_options);
+```
 ## Running
 
 * `ember serve`
