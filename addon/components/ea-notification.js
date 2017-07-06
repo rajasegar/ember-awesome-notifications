@@ -4,7 +4,9 @@ import styles from  '../styles/components/ea-notification';
 
 const {
   computed,
-  inject: { service }
+  inject: { service },
+  run: { later },
+  $
 } = Ember;
 
 export default Ember.Component.extend({
@@ -16,8 +18,12 @@ export default Ember.Component.extend({
     'layoutClass',
     'effectClass',
     'typeClass',
-    'showClass'
+    'showClass',
+    'hideClass'
   ],
+  isLoadingCircle: computed.equal('notification.effect', 'loadingcircle'),
+  isShow: true,
+  isDismiss: false,
   boxClass: computed(function() {
     return this.get('styles.ns-box');
   }),
@@ -30,12 +36,29 @@ export default Ember.Component.extend({
   typeClass: computed('notification.type', function() {
     return this.get(`styles.ns-type-${this.get('notification.type')}`);
   }),
-  showClass: computed('notification.dismiss', function() {
-    return this.get('notification.dismiss') ? this.get('styles.ns-hide') : this.get('styles.ns-show');
+  showClass: computed('isShow', function() {
+    return this.get('isShow') ? this.get('styles.ns-show'): null;
   }),
+  hideClass: computed('isDismiss', function() {
+    return this.get('isDismiss') ? this.get('styles.ns-hide') : null;
+  }),
+  didInsertElement() {
+    this._super(...arguments);
+  },
+  willDestroyElement() {
+    this._super(...arguments);
+    this.$().on('animationend', () => {
+      debugger
+      $(this).removeClass(this.get('styles.ns-hide'));
+    });
+  },
   actions: {
     dismiss() {
-      this.get('notifications').removeNotification(this.get('notification'));
+      this.set('isShow', false);
+      later(this, () => {
+        this.set('isDismiss', true);
+        this.get('notifications').removeNotification(this.get('notification'));
+      }, 25);
     }
   }
 });

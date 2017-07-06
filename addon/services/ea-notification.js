@@ -62,12 +62,9 @@ const EANotificationService = ArrayProxy.extend({
       return;
     }
 
-    notification.set('dismiss', true);
+    // notification.set('dismiss', true);
 
-    // Delay removal from DOM for dismissal animation
-    run.later(this, () => {
       this.removeObject(notification);
-    }, 500);
   },
 
 
