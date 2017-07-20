@@ -1,5 +1,12 @@
 # ember-awesome-notifications
 
+[![Build Status](https://travis-ci.org/rajasegar/ember-awesome-notifications.svg?branch=master)](https://travis-ci.org/rajasegar/ember-awesome-notifications) 
+[![npm](https://img.shields.io/npm/dm/ember-awesome-notifications.svg)](https://www.npmjs.com/package/ember-awesome-notifications)
+[![npm version](http://img.shields.io/npm/v/ember-awesome-notifications.svg?style=flat)](https://npmjs.org/package/ember-awesome-notifications "View this project on npm")
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![EmberObserver](http://emberobserver.com/badges/ember-awesome-notifications.svg?branch=master)](http://emberobserver.com/addons/ember-awesome-notifications)
+
+
 Simple ideas & effects for Ember notifications
 
 ## Demo
